@@ -4,12 +4,13 @@ import java.nio.file.Files;
 import java.nio.file.OpenOption;
 import java.nio.file.Path;
 
-public class main {
+public class InterLink {
 
 
     public static void main(String[] args) throws IOException {
         //Путь до файлу
         String fileRead = "resources\\acme_worksheet.csv";
+        //todo writer
         Path fileWrite = FileSystems.getDefault().getPath("resources", "acme_worksheet_new.csv");
 
         BufferedReader reader = null;
