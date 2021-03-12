@@ -7,7 +7,7 @@ public class InterLink {
     public static void main(String[] args) throws IOException {
         //Путь до файлу
         String fileRead = "resources\\acme_worksheet.csv";
-        FileWriter pw = new FileWriter("resources\\out\\data.csv", true);
+        FileWriter pw = new FileWriter("resources\\data.csv", true);
         BufferedReader reader = null;
         String line;
         ArrayList<String> employee = new ArrayList<>();
@@ -38,11 +38,14 @@ public class InterLink {
                 hours.add(row[2]);
 
             }
-            pw.write(employee.toString());
+            String emp = employee.toString();
+            String datesStr = dates.toString();
+            String hrs = hours.toString();
+            pw.write(emp.substring(1));
             pw.write("\n");
-            pw.write(dates.toString());
+            pw.write(datesStr.substring(1));
             pw.write("\n");
-            pw.write(hours.toString());
+            pw.write(hrs.substring(1));
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
